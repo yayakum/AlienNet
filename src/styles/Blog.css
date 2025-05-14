@@ -74,43 +74,43 @@
   margin-bottom: 30px;
 } */
 
-/* .terminal-header {
+.terminal-header {
   background-color: var(--terminal-header);
   padding: 10px 15px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   border-bottom: 1px solid var(--neon-green);
-} */
+}
 
-.terminal-title {
+/* .terminal-title {
   font-family: 'Share Tech Mono', monospace;
   color: var(--neon-green);
   font-size: 0.9rem;
-}
+} */
 
 /* .terminal-controls {
   display: flex;
   gap: 8px;
 } */
 
-.terminal-control {
+/* .terminal-control {
   width: 12px;
   height: 12px;
   border-radius: 50%;
   background-color: var(--neon-green);
   opacity: 0.7;
-}
+} */
 
-.terminal-body {
+/* .terminal-body {
   padding: 20px;
   max-height: 75vh;
   overflow-y: auto;
   scrollbar-width: thin;
   scrollbar-color: var(--neon-green) var(--terminal-bg);
-}
+} */
 
-.terminal-body::-webkit-scrollbar {
+/* .terminal-body::-webkit-scrollbar {
   width: 10px;
 }
 
@@ -122,7 +122,7 @@
   background-color: var(--neon-green);
   border-radius: 10px;
   border: 3px solid var(--terminal-bg);
-}
+} */
 
 /* Secciones del blog */
 .blog-section {
@@ -222,7 +222,8 @@
 /* Armas */
 .weapon-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(2, 1fr);
+  max-width: 1250px;
   gap: 20px;
 }
 

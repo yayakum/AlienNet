@@ -1,10 +1,6 @@
 import React from "react";
 import HeaderNeon from "../components/Header.jsx";
 import Footer from "../components/Footer.jsx";
-import CuerpoAzul from "../assets/Cuerpo_azul.png";
-import CuerpoAmarillo from "../assets/Cuerpo_amarillo.png";
-import CuerpoVerde from "../assets/Cuerpo_verde.png";
-import { Link } from "react-router-dom";
 
 import "../styles/App.css";
 
@@ -49,7 +45,7 @@ const GameFeatures = () => {
       <div className="features-container">
         <div className="cyber-feature">
           <div className="feature-icon-container">
-            <div className="feature-icon">🛸</div>
+            <div className="feature-icon"></div>
             <div className="icon-glow"></div>
           </div>
           <div className="cyber-divider"></div>
@@ -65,7 +61,7 @@ const GameFeatures = () => {
 
         <div className="cyber-feature">
           <div className="feature-icon-container">
-            <div className="feature-icon">❤️</div>
+            <div className="feature-icon"></div>
             <div className="icon-glow"></div>
           </div>
           <div className="cyber-divider"></div>
@@ -81,7 +77,7 @@ const GameFeatures = () => {
 
         <div className="cyber-feature">
           <div className="feature-icon-container">
-            <div className="feature-icon">🎮</div>
+            <div className="feature-icon"></div>
             <div className="icon-glow"></div>
           </div>
           <div className="cyber-divider"></div>
@@ -93,6 +89,42 @@ const GameFeatures = () => {
               <span className="data-item">CONFIG: CUSTOM</span>
             </div>
           </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+const GameTrailer = () => {
+  return (
+    <section className="cyber-trailer">
+      <div className="section-header">
+        <div className="warning-icon">⚠</div>
+        <h2>MIRA EL TRAILER</h2>
+        <div className="warning-icon">⚠</div>
+      </div>
+
+      <div className="trailer-container">
+        <div className="trailer-frame-container">
+          <div className="trailer-scanner"></div>
+          <div className="trailer-frame-border">
+            <iframe 
+              className="trailer-frame"
+              src="https://www.youtube.com/embed/B8B49XKy5RM" 
+              title="Trailer Oficial - Sobrevive en el Escritorio"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+              allowFullScreen
+            ></iframe>
+            <div className="corner-decoration top-left"></div>
+            <div className="corner-decoration top-right"></div>
+            <div className="corner-decoration bottom-left"></div>
+            <div className="corner-decoration bottom-right"></div>
+          </div>
+        </div>
+        <div className="trailer-content">
+          <h3>DESCUBRE LA ACCIÓN ALIENÍGENA</h3>
+          <p>Gameplay oficial de las batallas por la supervivencia en el escritorio</p>
         </div>
       </div>
     </section>
@@ -169,6 +201,7 @@ const Dashboard = () => {
       <main className="cyber-main">
         <Hero />
         <GameFeatures />
+          <GameTrailer />
         <Download />
       </main>
       <Footer />

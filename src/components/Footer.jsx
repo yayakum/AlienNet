@@ -52,24 +52,6 @@ const Footer = () => {
             >
               <Instagram size={18} />
             </a>
-            <a
-              href="https://youtube.com/aliennet"
-              className="cyber-social-link"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Youtube"
-            >
-              <Youtube size={18} />
-            </a>
-            <a
-              href="https://github.com/aliennet"
-              className="cyber-social-link"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Github"
-            >
-              <Github size={18} />
-            </a>
           </div>
         </div>
 
