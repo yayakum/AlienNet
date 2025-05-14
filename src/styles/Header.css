@@ -1,0 +1,187 @@
+/* Estilos para el Header con estética neon/cyberpunk similar al Blog */
+
+/* Variables de color */
+:root {
+  --neon-green: #39ff14;
+  --darker-green: #00c808;
+  --neon-blue: #0ff0fc;
+  --neon-yellow: #f9ff31;
+  --neon-red: #ff2b8f;
+  --dark-bg: #121212;
+  --darker-bg: #0a0a0a;
+  --terminal-bg: #0a140a;
+  --terminal-header: #1a2b1a;
+  --grid-line: rgba(57, 255, 20, 0.2);
+  --bright-text: #ffffff;
+  --dim-text: rgba(255, 255, 255, 0.7);
+  --glass-bg: rgba(10, 20, 10, 0.8);
+  --glass-border: rgba(57, 255, 20, 0.3);
+}
+
+/* Fuentes */
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&family=Share+Tech+Mono&display=swap');
+
+/* Estilos del header neon */
+.header-neon {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: var(--glass-bg);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--glass-border);
+  box-shadow: 0 0 20px rgba(57, 255, 20, 0.2);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+/* Logo */
+.logo-container {
+  position: relative;
+}
+
+.alien-logo {
+  font-family: 'Rajdhani', sans-serif;
+  font-weight: 700;
+  font-size: 2.2rem;
+  color: var(--neon-green);
+  text-shadow: 0 0 10px rgba(57, 255, 20, 0.7);
+  text-decoration: none;
+  margin: 0;
+  letter-spacing: 2px;
+}
+
+.alien-logo span {
+  color: var(--bright-text);
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
+}
+
+/* Navegación */
+.nav-menu ul {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-menu li {
+  position: relative;
+}
+
+.nav-button {
+  font-family: 'Share Tech Mono', monospace;
+  background-color: transparent;
+  color: var(--bright-text);
+  border: 1px solid var(--neon-green);
+  padding: 8px 20px;
+  font-size: 0.9rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-button:hover {
+  background-color: var(--neon-green);
+  color: var(--dark-bg);
+  box-shadow: 0 0 15px rgba(57, 255, 20, 0.7);
+}
+
+.exit-button {
+  font-family: 'Share Tech Mono', monospace;
+  background-color: transparent;
+  color: var(--bright-text);
+  border: 1px solid var(--neon-red);
+  padding: 8px 20px;
+  font-size: 0.9rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.exit-button:hover {
+  background-color: var(--neon-red);
+  color: var(--dark-bg);
+  box-shadow: 0 0 15px rgba(255, 43, 143, 0.7);
+}
+
+/* Botón de menú móvil */
+.mobile-menu-button {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.mobile-menu-button span {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: var(--neon-green);
+  border-radius: 2px;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 5px rgba(57, 255, 20, 0.5);
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .header-neon {
+    padding: 1rem;
+  }
+  
+  .mobile-menu-button {
+    display: flex;
+  }
+  
+  .nav-menu {
+    position: fixed;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 70px);
+    background-color: rgba(10, 20, 10, 0.95);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 2rem;
+    clip-path: circle(0px at top right);
+    transition: clip-path 0.5s ease;
+    overflow-y: auto;
+  }
+  
+  .nav-menu.open {
+    clip-path: circle(1500px at top right);
+  }
+  
+  .nav-menu ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+  
+  .nav-button, .exit-button {
+    width: 100%;
+    text-align: center;
+    padding: 12px 20px;
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .alien-logo {
+    font-size: 1.8rem;
+  }
+}

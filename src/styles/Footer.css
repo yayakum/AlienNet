@@ -1,0 +1,261 @@
+/* Estilos para el Footer con estética cyberpunk/futurista */
+
+:root {
+  --cyber-neon-green: #39ff14;
+  --cyber-darker-green: #00c808;
+  --cyber-neon-blue: #0ff0fc;
+  --cyber-neon-yellow: #f9ff31;
+  --cyber-neon-red: #ff2b8f;
+  --cyber-dark-bg: #121212;
+  --cyber-darker-bg: #0a0a0a;
+  --cyber-terminal-bg: #0a140a;
+  --cyber-terminal-header: #1a2b1a;
+  --cyber-grid-line: rgba(57, 255, 20, 0.2);
+  --cyber-bright-text: #ffffff;
+  --cyber-dim-text: rgba(255, 255, 255, 0.7);
+  --cyber-glass-bg: rgba(10, 20, 10, 0.8);
+  --cyber-glass-border: rgba(57, 255, 20, 0.3);
+}
+
+/* Fuentes */
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&family=Share+Tech+Mono&display=swap');
+
+/* Estilos del footer cyberpunk */
+.cyber-footer {
+  background-color: var(--cyber-terminal-bg);
+  color: var(--cyber-bright-text);
+  border-top: 1px solid var(--cyber-neon-green);
+  position: relative;
+  box-shadow: 0 0 20px rgba(57, 255, 20, 0.3);
+  overflow: hidden;
+}
+
+.terminal-glitch-top, .terminal-glitch-bottom {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--cyber-neon-green), transparent);
+  animation: scanGlitch 3s linear infinite;
+}
+
+.terminal-glitch-top {
+  top: 0;
+}
+
+.terminal-glitch-bottom {
+  bottom: 0;
+  animation-delay: 1.5s;
+}
+
+@keyframes scanGlitch {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.cyber-footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, 
+    rgba(10, 20, 10, 0.5) 0px,
+    rgba(10, 20, 10, 0.3) 2px, 
+    rgba(10, 20, 10, 0.1) 4px,
+    rgba(10, 20, 10, 0) 6px);
+  background-size: 100% 6px;
+  pointer-events: none;
+  opacity: 0.3;
+}
+
+.cyber-footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  position: relative;
+  z-index: 1;
+}
+
+.cyber-footer-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.cyber-footer-top::after {
+  content: '';
+  position: absolute;
+  bottom: -1rem;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--cyber-neon-green), transparent);
+}
+
+.cyber-footer-logo-link {
+  text-decoration: none;
+}
+
+.footer-logo-text {
+  font-family: 'Rajdhani', sans-serif;
+  font-weight: 700;
+  font-size: 1.8rem;
+  color: var(--cyber-bright-text);
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
+  letter-spacing: 2px;
+}
+
+.footer-highlight {
+  color: var(--cyber-neon-green);
+  text-shadow: 0 0 10px rgba(57, 255, 20, 0.7);
+}
+
+.cyber-footer-tagline {
+  font-family: 'Share Tech Mono', monospace;
+  color: var(--cyber-dim-text);
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.terminal-prompt {
+  color: var(--cyber-neon-green);
+  margin-right: 8px;
+  animation: blinkPrompt 1.5s step-end infinite;
+}
+
+@keyframes blinkPrompt {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.cyber-footer-social {
+  display: flex;
+  gap: 0.8rem;
+}
+
+.cyber-social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 4px;
+  background-color: rgba(0, 0, 0, 0.3);
+  border: 1px solid var(--cyber-grid-line);
+  color: var(--cyber-bright-text);
+  text-decoration: none;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.cyber-social-link::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  background: linear-gradient(45deg, var(--cyber-neon-green), var(--cyber-neon-blue));
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.cyber-social-link:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(57, 255, 20, 0.3);
+  color: var(--cyber-darker-green);
+  border-color: transparent;
+}
+
+.cyber-social-link:hover::before {
+  opacity: 1;
+}
+
+.cyber-footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.cyber-copyright {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 0.8rem;
+  color: var(--cyber-dim-text);
+  display: flex;
+  align-items: center;
+}
+
+.cyber-footer-warning {
+  display: flex;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 5px 12px;
+  border-radius: 5px;
+  border: 1px solid var(--cyber-grid-line);
+}
+
+.warning-icon {
+  color: var(--cyber-neon-yellow);
+  font-size: 1rem;
+  animation: pulse 2s infinite;
+}
+
+.warning-text {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 0.8rem;
+  color: var(--cyber-neon-yellow);
+  margin: 0 8px;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .cyber-footer-top {
+    flex-direction: column;
+    gap: 1.5rem;
+    text-align: center;
+  }
+  
+  .cyber-footer-bottom {
+    flex-direction: column;
+    gap: 1.5rem;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .cyber-footer-content {
+    padding: 1.5rem 1rem;
+  }
+  
+  .cyber-social-link {
+    width: 32px;
+    height: 32px;
+  }
+}
