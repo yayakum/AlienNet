@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "../styles/Header.css";
+import Logo_Alien_Net from "../assets/Logo.png"
 
 const HeaderNeon = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -8,8 +9,12 @@ const HeaderNeon = () => {
   return (
     <header className="header-neon">
       <div className="logo-container">
-        <Link to="/" className="alien-logo">
-          ALIEN<span>NET</span>
+        <Link to="/" className="cyber-footer-logo-link">
+          <img
+            src={Logo_Alien_Net}
+            alt="Logo Alien Net"
+            className="header-logo" 
+          />
         </Link>
       </div>
 

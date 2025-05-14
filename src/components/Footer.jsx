@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { Instagram, Youtube, Twitter, Facebook, Github } from "lucide-react";
 import "../styles/Footer.css";
-
+import Logo_Alien_Net from "../assets/Logo.png"
 const Footer = () => {
   return (
     <footer className="cyber-footer">
@@ -12,9 +12,11 @@ const Footer = () => {
         <div className="cyber-footer-top">
           <div className="cyber-footer-logo">
             <Link to="/" className="cyber-footer-logo-link">
-              <span className="footer-logo-text">
-                ALIEN<span className="footer-highlight">NET</span>
-              </span>
+              <img
+                src={Logo_Alien_Net}
+                alt="Logo Alien Net"
+                className="header-logo" 
+              />
             </Link>
             <p className="cyber-footer-tagline">
               <span className="terminal-prompt">&gt;</span> ¡SOBREVIVE EN EL

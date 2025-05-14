@@ -8,7 +8,6 @@ import { Link } from "react-router-dom";
 
 import "../styles/App.css";
 
-// Banner principal
 const Hero = () => {
   return (
     <section className="cyber-hero">
@@ -38,7 +37,6 @@ const Hero = () => {
   );
 };
 
-// Componente de características del juego
 const GameFeatures = () => {
   return (
     <section className="cyber-features">
@@ -101,7 +99,6 @@ const GameFeatures = () => {
   );
 };
 
-// Componente de descarga
 const Download = () => {
   return (
     <section className="cyber-cta">
@@ -165,7 +162,6 @@ const Download = () => {
   );
 };
 
-// Componente principal Dashboard
 const Dashboard = () => {
   return (
     <div className="cyber-app">

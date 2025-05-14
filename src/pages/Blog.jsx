@@ -6,9 +6,8 @@ import CuerpoAmarillo from "../assets/Cuerpo_amarillo.png";
 import CuerpoVerde from "../assets/Cuerpo_verde.png";
 import { Link } from "react-router-dom";
 
-import "../styles/Blog.css"; // Nuevo archivo CSS para el blog
+import "../styles/Blog.css";
 
-// Componente principal Blog
 const Blog = () => {
   return (
     <div className="app">
@@ -36,7 +35,7 @@ const Blog = () => {
                 </div>
                 <div className="section-content">
                   <p>
-                    <span className="highlight">> ALIEN NET</span> es un juego
+                    <span className="highlight"> ALIEN NET</span> es un juego
                     de batallas alienígenas en el escritorio donde debes ser el
                     último en sobrevivir.
                   </p>

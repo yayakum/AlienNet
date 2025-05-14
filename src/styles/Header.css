@@ -40,27 +40,59 @@
 }
 
 /* Logo */
-.logo-container {
+.header-logo {
+  height: 50px;
+  width: auto;
+  filter: drop-shadow(0 0 8px var(--neon-green));
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 3; /* Asegura que el logo esté por encima de los efectos */
+}
+
+/* Efecto flickering para el logo */
+.header-logo {
+  animation: flicker 5s infinite alternate;
+}
+
+/* Ajuste específico para mezclar con el fondo del header */
+.cyber-footer-logo-link {
+  display: block;
   position: relative;
 }
 
-.alien-logo {
-  font-family: 'Rajdhani', sans-serif;
-  font-weight: 700;
-  font-size: 2.2rem;
-  color: var(--neon-green);
-  text-shadow: 0 0 10px rgba(57, 255, 20, 0.7);
-  text-decoration: none;
-  margin: 0;
-  letter-spacing: 2px;
+.cyber-footer-logo-link::before {
+  content: "";
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  right: -20px;
+  bottom: -20px;
+  background: radial-gradient(
+    circle at center,
+    rgba(57, 255, 20, 0.1) 0%,
+    rgba(10, 20, 10, 0) 70%
+  );
+  z-index: 0;
+  pointer-events: none;
 }
 
-.alien-logo span {
-  color: var(--bright-text);
-  text-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
+@keyframes flicker {
+  0%, 19.999%, 22%, 62.999%, 64%, 64.999%, 70%, 100% {
+    opacity: 1;
+    filter: drop-shadow(0 0 8px var(--neon-green)) brightness(1);
+  }
+  20%, 21.999%, 63%, 63.999%, 65%, 69.999% {
+    opacity: 0.8;
+    filter: drop-shadow(0 0 5px var(--neon-green)) brightness(1.2) contrast(1.2);
+  }
 }
 
-/* Navegación */
+@media screen and (max-width: 480px) {
+  .header-logo {
+    height: 40px;
+  }
+}
+
 .nav-menu ul {
   display: flex;
   list-style: none;
@@ -117,7 +149,6 @@
   box-shadow: 0 0 15px rgba(255, 43, 143, 0.7);
 }
 
-/* Botón de menú móvil */
 .mobile-menu-button {
   display: none;
   flex-direction: column;
@@ -137,7 +168,6 @@
   box-shadow: 0 0 5px rgba(57, 255, 20, 0.5);
 }
 
-/* Responsive */
 @media screen and (max-width: 768px) {
   .header-neon {
     padding: 1rem;

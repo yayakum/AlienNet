@@ -1,4 +1,3 @@
-/* Estilos para el Footer con estética cyberpunk/futurista */
 
 :root {
   --cyber-neon-green: #39ff14;
@@ -20,7 +19,7 @@
 /* Fuentes */
 @import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&family=Share+Tech+Mono&display=swap');
 
-/* Estilos del footer cyberpunk */
+/* Estilos del footer*/
 .cyber-footer {
   background-color: var(--cyber-terminal-bg);
   color: var(--cyber-bright-text);
@@ -100,17 +99,56 @@
   background: linear-gradient(90deg, transparent, var(--cyber-neon-green), transparent);
 }
 
-.cyber-footer-logo-link {
-  text-decoration: none;
+/* Logo */
+.header-logo {
+  height: 50px;
+  width: auto;
+  filter: drop-shadow(0 0 8px var(--neon-green));
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 3;
 }
 
-.footer-logo-text {
-  font-family: 'Rajdhani', sans-serif;
-  font-weight: 700;
-  font-size: 1.8rem;
-  color: var(--cyber-bright-text);
-  text-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
-  letter-spacing: 2px;
+.header-logo {
+  animation: flicker 5s infinite alternate;
+}
+
+.cyber-footer-logo-link {
+  display: block;
+  position: relative;
+}
+
+.cyber-footer-logo-link::before {
+  content: "";
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  right: -20px;
+  bottom: -20px;
+  background: radial-gradient(
+    circle at center,
+    rgba(57, 255, 20, 0.1) 0%,
+    rgba(10, 20, 10, 0) 70%
+  );
+  z-index: 0;
+  pointer-events: none;
+}
+
+@keyframes flicker {
+  0%, 19.999%, 22%, 62.999%, 64%, 64.999%, 70%, 100% {
+    opacity: 1;
+    filter: drop-shadow(0 0 8px var(--neon-green)) brightness(1);
+  }
+  20%, 21.999%, 63%, 63.999%, 65%, 69.999% {
+    opacity: 0.8;
+    filter: drop-shadow(0 0 5px var(--neon-green)) brightness(1.2) contrast(1.2);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .header-logo {
+    height: 40px;
+  }
 }
 
 .footer-highlight {
@@ -234,7 +272,6 @@
   }
 }
 
-/* Responsive */
 @media screen and (max-width: 768px) {
   .cyber-footer-top {
     flex-direction: column;
