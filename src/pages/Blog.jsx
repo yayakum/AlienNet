@@ -7,6 +7,10 @@ import CuerpoVerde from "../assets/Perfil_verde.png";
 import CuerpoRosa from "../assets/Perfil_rosa.png";
 import CuerpoMorado from "../assets/Perfil_morado.png";
 import CuerpoGris from "../assets/Perfil_gris.png";
+import powerupempuje from "../assets/powerupempuje.png";
+import powerupsprint from "../assets/powerupsprint.png";
+import arma1 from "../assets/arma1.png";
+import arma2 from "../assets/arma2.png";
 // Añade estos imports al principio del archivo junto a los demás imports
 import { 
   FaKeyboard, FaGamepad, FaPlaystation, FaXbox,
@@ -153,7 +157,9 @@ const Blog = () => {
                 </div>
                 <div className="section-content weapon-grid">
                   <div className="weapon-card">
-                    <div className="weapon-icon"></div>
+                    <div className="weapon-icon">
+                        <img src={arma1} alt="Principal" className="powerup-icon" />
+                    </div>
                     <div className="weapon-info">
                       <h3>RAYO REPULSOR</h3>
                       <p>
@@ -166,7 +172,9 @@ const Blog = () => {
                     </div>
                   </div>
                   <div className="weapon-card">
-                    <div className="weapon-icon"></div>
+                    <div className="weapon-icon">
+                        <img src={arma2} alt="Secundaria" className="powerup-icon" />
+                    </div>
                     <div className="weapon-info">
                       <h3>RAYO DE GRAVEDAD</h3>
                       <p>
@@ -178,26 +186,28 @@ const Blog = () => {
                     </div>
                   </div>
                   <div className="weapon-card">
-                    <div className="weapon-icon"></div>
+                    <div className="weapon-icon">
+                      <img src={powerupsprint} alt="Super Disparo" className="powerup-icon" />
+                    </div>
                     <div className="weapon-info">
                       <h3>SUPER DISPARO</h3>
                       <p>Realiza un disparo con mayor diametro y fuerza de empuje</p>
                       <div className="weapon-stats">
                         <span>POWER-UP</span>
-                        
-                        
                       </div>
                     </div>
                   </div>
+
                   <div className="weapon-card">
-                    <div className="weapon-icon"></div>
+                    <div className="weapon-icon">
+                      <img src={powerupempuje} alt="Super Velocidad" className="powerup-icon" />
+                    </div>
                     <div className="weapon-info">
                       <h3>SUPER VELOCIDAD</h3>
                       <p>Realiza un sprint a una velocidad del 20% más de lo normal</p>
                       <div className="weapon-stats">
                         <span>POWER-UP</span>
-                        <span>Duración: 4s</span>
-                        
+                        <span>Duración: 2s</span>
                       </div>
                     </div>
                   </div>
@@ -220,7 +230,7 @@ const Blog = () => {
                     </div>
                     <div className="character-data">
                       <h3>
-                        BLURP<span className="id-tag">#A1</span>
+                        NUBLOK<span className="id-tag">#A1</span>
                       </h3>
                       
                       <div className="character-skill">
@@ -228,7 +238,7 @@ const Blog = () => {
                           XD
                         </span>
                         <p>
-                          LORE DEL PERSONAJE
+                          Nublok es un ingeniero galáctico que habita en los cielos eternamente nublados del planeta Cirrus-9. Domina la manipulación del clima con su tecnología de condensación cuántica. Es callado, reflexivo, y su risa suena como un trueno tímido.
                         </p>
                       </div>
                     </div>
@@ -250,7 +260,7 @@ const Blog = () => {
                           XD
                         </span>
                         <p>
-                          LORE DEL PERSONAJE
+                          Zax es el infame pirata estelar del cinturón Nova Krix. Con su cicatriz como prueba de mil batallas, Zax comanda una nave con IA rebelde y una tripulación de androides que lo veneran como un dios. Su lema: "Si lo ves venir… ya es tarde."
                         </p>
                       </div>
                     </div>
@@ -272,7 +282,7 @@ const Blog = () => {
                           XD
                         </span>
                         <p>
-                          LORE DEL PERSONAJE
+                          Ya establecido como el nombre oficial de este gelatinoso alienígena, Gloop es un ser travieso y brillante del pantano radiactivo de Slurmia. Tiene la capacidad de dividirse en clones más pequeños, pero ninguno puede resistirse a una buena fiesta galáctica.
                         </p>
                       </div>
                     </div>
@@ -287,14 +297,14 @@ const Blog = () => {
                     </div>
                     <div className="character-data">
                       <h3>
-                        ZAX<span className="id-tag">#A2</span>
+                        MUBU<span className="id-tag">#A2</span>
                       </h3>
                       <div className="character-skill">
                         <span className="skill-title">
                           XD
                         </span>
                         <p>
-                          LORE DEL PERSONAJE
+                          Mubu es el resultado de un experimento de amor interestelar fallido. Aunque parece tierno, es una fuerza imparable en combate emocional. Su especialidad: desarmar a sus enemigos con frases motivacionales y abrazos devastadores (literalmente, puede romper huesos).
                         </p>
                       </div>
                     </div>
@@ -309,14 +319,14 @@ const Blog = () => {
                     </div>
                     <div className="character-data">
                       <h3>
-                        ZAX<span className="id-tag">#A2</span>
+                        KLYXX<span className="id-tag">#A2</span>
                       </h3>
                       <div className="character-skill">
                         <span className="skill-title">
                           XD
                         </span>
                         <p>
-                          LORE DEL PERSONAJE
+                          Klyxx es el profeta de Nebulark, un planeta donde el tiempo fluye hacia atrás. Puede hablar en idiomas olvidados y escribir en el aire con sus pensamientos. Se rumorea que puede predecir el pasado y recordar el futuro. ¿Confuso? Exactamente.
                         </p>
                       </div>
                     </div>
@@ -331,14 +341,14 @@ const Blog = () => {
                     </div>
                     <div className="character-data">
                       <h3>
-                        ZAX<span className="id-tag">#A2</span>
+                        DRYXX<span className="id-tag">#A2</span>
                       </h3>
                       <div className="character-skill">
                         <span className="skill-title">
                           XD
                         </span>
                         <p>
-                          LORE DEL PERSONAJE
+                          Dryxx es un agente encubierto de la Orden Silenciosa. Nacido sin cuerdas vocales ni sombra, es el mejor infiltrado del universo. Cada paso que da está calculado, cada mirada, una amenaza. Aparece donde no lo esperas y desaparece antes de que entiendas por qué viniste.
                         </p>
                       </div>
                     </div>
@@ -394,19 +404,19 @@ const Blog = () => {
                       <table className="control-table">
                         <tbody>
                           <tr>
-                            <td className="key"></td>
+                            <td className="key">JOYSTICK</td>
                             <td>MOVIMIENTO</td>
                           </tr>
                           <tr>
-                            <td className="key"></td>
+                            <td className="key">A</td>
                             <td>SALTAR</td>
                           </tr>
                           <tr>
-                            <td className="key"></td>
+                            <td className="key">LT</td>
                             <td>APUNTAR</td>
                           </tr>
                           <tr>
-                            <td className="key"></td>
+                            <td className="key">RT</td>
                             <td>DISPARAR</td>
                           </tr>
                         </tbody>

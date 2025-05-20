@@ -588,3 +588,26 @@
     align-items: center;
   }
 }
+
+/* Estilos para las imágenes de powerups */
+.powerup-icon {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Asegúrate de que los contenedores de iconos tengan el tamaño adecuado */
+.weapon-icon {
+  width: 70px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 20px;
+  background-color: rgba(57, 255, 20, 0.1);
+  border-radius: 50%;
+  border: 1px solid rgba(57, 255, 20, 0.3);
+  overflow: hidden; /* Para que las imágenes no se salgan del círculo */
+}

@@ -26,7 +26,7 @@ const Footer = () => {
 
           <div className="cyber-footer-social">
             <a
-              href="https://discord.gg/aliennet"
+              href="https://www.facebook.com/share/1Es9GdtS1h/"
               className="cyber-social-link"
               target="_blank"
               rel="noopener noreferrer"
@@ -35,7 +35,7 @@ const Footer = () => {
               <Facebook size={18} />
             </a>
             <a
-              href="https://twitter.com/aliennet"
+              href="https://x.com/aliennet_dv?t=au4wH0i40WKoPZcSIoqXLg&s=09"
               className="cyber-social-link"
               target="_blank"
               rel="noopener noreferrer"
@@ -44,7 +44,7 @@ const Footer = () => {
               <Twitter size={18} />
             </a>
             <a
-              href="https://instagram.com/aliennet"
+              href="https://www.instagram.com/aliennet.dv?igsh=MW95ZTNlemg0OWI0ag=="
               className="cyber-social-link"
               target="_blank"
               rel="noopener noreferrer"
