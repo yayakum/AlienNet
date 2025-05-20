@@ -180,7 +180,7 @@ const Download = () => {
           </div>
 
           <button className="download-button"
-            onClick={() => window.open('https://store.steampowered.com/app/367520/Hollow_Knight/', '_blank')}
+            onClick={() => window.open('https://drive.google.com/file/d/1n4-DC0wnzQM4otxcjOjCc4-KKFJoOamh/view?usp=sharing', '_blank')}
           >
             DESCARGAR JUEGO
             <div className="download-icon">↓</div>
