@@ -1,5 +1,3 @@
-/* Estilos para el Dashboard con estética cyberpunk/futurista */
-
 /* Variables de color */
 :root {
   --neon-green: #39ff14;
@@ -43,10 +41,9 @@ body {
 
 .cyber-main {
   flex: 1;
-  padding-top: 60px; /* Para el header fijo */
+  padding-top: 60px; 
 }
 
-/* Corner decorations */
 .corner-decoration {
   position: absolute;
   width: 30px;
@@ -54,8 +51,6 @@ body {
   pointer-events: none;
 }
 
-
-/* Section header estilo terminal */
 .section-header {
   display: flex;
   align-items: center;
@@ -89,7 +84,6 @@ body {
   }
 }
 
-/* Terminal prompt */
 .terminal-prompt {
   color: var(--neon-green);
   font-family: 'Share Tech Mono', monospace;
@@ -106,7 +100,6 @@ body {
   }
 }
 
-/* Hero Section */
 .cyber-hero {
   height: 100vh;
   background-color: var(--darker-bg);

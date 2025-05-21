@@ -11,20 +11,7 @@ import powerupempuje from "../assets/powerupempuje.png";
 import powerupsprint from "../assets/powerupsprint.png";
 import arma1 from "../assets/arma1.png";
 import arma2 from "../assets/arma2.png";
-// Añade estos imports al principio del archivo junto a los demás imports
-import { 
-  FaKeyboard, FaGamepad, FaPlaystation, FaXbox,
-  FaArrowUp, FaArrowDown, FaArrowLeft, FaArrowRight 
-} from 'react-icons/fa';
-import { 
-  BiJoystick, BiShieldQuarter 
-} from 'react-icons/bi';
-import { 
-  TbKeyboardShow, TbSpace, TbLetterE, TbLetterQ, 
-  TbLetterA, TbLetterB, TbLetterX, TbLetterY,
-  TbSquare, TbTriangle, TbCircle
-} from 'react-icons/tb';
-import { GiAmmoBox } from 'react-icons/gi';
+
 import "../styles/Blog.css";
 
 const Blog = () => {
@@ -34,17 +21,6 @@ const Blog = () => {
       <div className="alien-container">
         <main className="blog-content">
           <div className="terminal-window">
-            {/* <div className="terminal-header">
-              <span className="terminal-title">
-                // BLOG :: DOCUMENTACIÓN DEL JUEGO
-              </span>
-              <div className="terminal-controls">
-                <span className="terminal-control"></span>
-                <span className="terminal-control"></span>
-                <span className="terminal-control"></span>
-              </div>
-            </div> */}
-
             <div className="terminal-body">
               <section className="blog-section">
                 <div className="section-header">

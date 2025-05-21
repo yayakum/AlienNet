@@ -1,5 +1,3 @@
-/* Estilos para el Header con estética neon/cyberpunk similar al Blog */
-
 /* Variables de color */
 :root {
   --neon-green: #39ff14;
@@ -21,7 +19,6 @@
 /* Fuentes */
 @import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&family=Share+Tech+Mono&display=swap');
 
-/* Estilos del header neon */
 .header-neon {
   display: flex;
   justify-content: space-between;
@@ -39,22 +36,19 @@
   z-index: 1000;
 }
 
-/* Logo */
 .header-logo {
   height: 50px;
   width: auto;
   filter: drop-shadow(0 0 8px var(--neon-green));
   transition: all 0.3s ease;
   position: relative;
-  z-index: 3; /* Asegura que el logo esté por encima de los efectos */
+  z-index: 3;
 }
 
-/* Efecto flickering para el logo */
 .header-logo {
   animation: flicker 5s infinite alternate;
 }
 
-/* Ajuste específico para mezclar con el fondo del header */
 .cyber-footer-logo-link {
   display: block;
   position: relative;

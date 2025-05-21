@@ -19,7 +19,6 @@
 /* Fuentes */
 @import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&family=Share+Tech+Mono&display=swap');
 
-/* Estilos del footer*/
 .cyber-footer {
   background-color: var(--cyber-terminal-bg);
   color: var(--cyber-bright-text);
@@ -99,7 +98,6 @@
   background: linear-gradient(90deg, transparent, var(--cyber-neon-green), transparent);
 }
 
-/* Logo */
 .header-logo {
   height: 50px;
   width: auto;

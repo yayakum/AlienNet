@@ -110,7 +110,7 @@ const GameTrailer = () => {
           <div className="trailer-frame-border">
             <iframe 
               className="trailer-frame"
-              src="https://www.youtube.com/embed/B8B49XKy5RM" 
+              src="https://www.youtube.com/embed/e6KzR7J0aeE" 
               title="Trailer Oficial - Sobrevive en el Escritorio"
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
